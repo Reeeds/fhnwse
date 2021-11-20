@@ -45,13 +45,5 @@ print("GPU is", "available" if gpu else "NOT AVAILABLE")
 --> Apple M1 Pro
 
 
-Hallo Velo
-
-Tschüss
-
-
-wieder main
-
-feature 1234
-
-main lokal
+Info RSC:
+- run cifar10...py mit VS Code Run Button ausführen

@@ -1,6 +1,8 @@
-import matplotlib.pyplot as plt
 import tensorflow as tf
 from tensorflow import keras
+
+gpu = len(tf.config.list_physical_devices("GPU")) > 0
+print("GPU is", "available" if gpu else "NOT AVAILABLE")
 
 # Load Datenset CIFAR10
 # Load into data set and test set
@@ -44,33 +46,12 @@ model = keras.Sequential(
     ]
 )
 # Compile model
-print("******************")
-print("hoi")
 model.compile(
     optimizer="SGD",
     loss="categorical_crossentropy",
     metrics=["accuracy"],
 )
-# plot diagnostic learning curves
 
-
-def summarize_diagnostics(history):
-    # plot loss
-    plt.title("Cross Entropy Loss")
-    plt.plot(history.history["loss"], color="blue", label="train")
-    plt.plot(history.history["val_loss"], color="orange", label="test")
-    plt.show()
-    # plot accuracy
-    plt.title("Classification Accuracy")
-    plt.plot(history.history["accuracy"], color="blue", label="train")
-    plt.plot(history.history["val_accuracy"], color="orange", label="test")
-    plt.show()
-
-
-# Run model
-
-
-# save model
 model.fit(
     X_train_scaled,
     y_train_categorial,
@@ -80,6 +61,4 @@ model.fit(
     ),
     epochs=1,
 )
-model.save("model/saved_model")
-# learning curves
-# summarize_diagnostics(history)
+# model.save("model/saved_model")
