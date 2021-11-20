@@ -66,5 +66,3 @@ model.fit(X_train_scaled, y_train_categorial, validation_data=(X_test_scaled, y_
 model.save("model/saved_model")
 # learning curves
 #summarize_diagnostics(history)
-
-X_train.head()
