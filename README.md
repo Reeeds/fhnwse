@@ -45,4 +45,6 @@ print("GPU is", "available" if gpu else "NOT AVAILABLE")
 --> Apple M1 Pro
 
 
-Hallo Velo
+Hallo Velo 
+
+Tschüss
