@@ -54,7 +54,7 @@ model.compile(
 # plot diagnostic learning curves
 
 
-def summarize_diagnostics(history):
+def summarize_diagnostics(history: object):
     # plot loss
     plt.title("Cross Entropy Loss")
     plt.plot(history.history["loss"], color="blue", label="train")
