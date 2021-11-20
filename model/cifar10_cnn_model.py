@@ -67,3 +67,4 @@ model.save("model/saved_model")
 # learning curves
 #summarize_diagnostics(history)
 
+X_train.head()
