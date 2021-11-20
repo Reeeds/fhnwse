@@ -25,7 +25,7 @@ jupyer notebook       --> richtiger Kernel auswählen
 
 
 Test in JN
-# What version of Python do you have?
+
 import sys
 
 import tensorflow.keras
