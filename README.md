@@ -2,7 +2,7 @@
 venv
  python -m venv [directory]
  source myvenv/bin/activate
- 
+
 *********************************************
 
 conda
@@ -45,7 +45,7 @@ print("GPU is", "available" if gpu else "NOT AVAILABLE")
 --> Apple M1 Pro
 
 
-Hallo Velo 
+Hallo Velo
 
 Tschüss
 

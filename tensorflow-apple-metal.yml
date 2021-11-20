@@ -1,5 +1,5 @@
 name: tensorflow
- 
+
 dependencies:
     - python=3.9
     - pip>=19.0
@@ -23,4 +23,3 @@ dependencies:
         - bayesian-optimization
         - gym
         - kaggle
-        
