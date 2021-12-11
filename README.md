@@ -1,3 +1,17 @@
+Flask App starten:
+1. run api/app.py in Visual Code
+2. app runs on http://127.0.0.1:5000/
+3. select image
+4. hit predict button
+
+
+
+
+
+
+
+
+Interne Notes
 
 venv
  python -m venv [directory]

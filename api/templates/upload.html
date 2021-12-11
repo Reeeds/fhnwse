@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="centered">
+    <div class="row">
+        <div class="centered">
+            <div class="image-container">
+                <figure>
+                  <img src="/static/uploads/{{display_image}}" style="width:400px;height:250px;">
+                </figure>
+            </div>
+            <br>
+            <p style="color:red"> {{predictions}}</p>
+            <br>
+            <div class="upload-form">
+                <p><b>Upload another?</b></p>
+                <form action="/uploader" method="POST"
+                enctype = "multipart/form-data">
+                <div class="form-group">
+                    <input class="form-control-file" type="file" name="file" /><br>
+                    <input class="form-control"  id="btngo" type="submit"/>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+</div>
+</div>
+{% endblock %}
