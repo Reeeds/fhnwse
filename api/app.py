@@ -2,6 +2,16 @@ from flask import Flask, request, render_template
 from app_helper_model import *
 from werkzeug.utils import secure_filename
 import os
+import logging
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+    handlers=[logging.FileHandler("logs/logs.log"), logging.StreamHandler()],
+)
+
+logger = logging.getLogger(__name__)
+
 
 app = Flask(__name__)
 
