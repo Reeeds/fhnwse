@@ -18,13 +18,17 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    '''jgghjg'''
+    '''The function returns the render template from the 
+       index.html file.
+    '''
     return render_template("index.html")
 
 
 @app.route("/uploader", methods=["POST"])
 def upload_file():
-    '''Das '''
+    '''The function returns the render template from the upload.html file. 
+       Method: POST
+    '''
     predictions = ""
     if request.method == "POST":
         f = request.files["file"]
