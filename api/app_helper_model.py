@@ -9,7 +9,11 @@ logger = logging.getLogger(__name__)
 
 
 def get_predictions(file_path: str) -> str:
-    """docstring todo"""
+    """The function returns the category of the image based on the model trained in Cifar 10.
+       trained model.
+       Possible output:
+       Aeroplane, Automobile, Bird, Cat, Deer, Dog, Frog, Horse, Ship or Truck.
+    """
     try:
         Image.open(file_path)
         model = load_model("./model/model2.h5")
