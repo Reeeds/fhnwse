@@ -10,9 +10,9 @@ logger = logging.getLogger(__name__)
 
 def get_predictions(file_path: str) -> str:
     """The function returns the category of the image based on the model trained in Cifar 10.
-       trained model.
-       Possible output:
-       Aeroplane, Automobile, Bird, Cat, Deer, Dog, Frog, Horse, Ship or Truck.
+    trained model.
+    Possible output:
+    Aeroplane, Automobile, Bird, Cat, Deer, Dog, Frog, Horse, Ship or Truck.
     """
     try:
         Image.open(file_path)
@@ -58,5 +58,5 @@ def get_predictions(file_path: str) -> str:
 
         return resultCategory
     except IOError:
-        logger.warn("Uploaded file is not an image!")
+        logger.warning("Uploaded file is not an image!")
         return "No Catetegory - Uploaded file is not an image!"
