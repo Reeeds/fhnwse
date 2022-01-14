@@ -1,31 +1,18 @@
-from flask import Flask, request, render_template
 from app_helper_model import *
-from werkzeug.utils import secure_filename
-import os
-import logging
-from keras.models import load_model
-from keras.preprocessing import image
-import numpy as np
-import logging
-from PIL import Image
 import pytest
 
 
-# Test picture
-#Wie bekommt man ein test Bild hier hinein
-
-test_picture_aeroplane={
-        # Bild von einem Flugzeug von tests\pictures
-    }
-def test_get_predictions():
-    response=get_predictions(test_picture_aeroplane)
-    assert response.resultCategory == "Aeroplane"
-
-test_picture_truck={
-        # Bild von einem Flugzeug von tests\pictures
-    }
-def test_get_predictions():
-    response=get_predictions(test_picture_truck)
-    assert response.resultCategory == "truck"
-
-
+@pytest.mark.parametrize(
+    "input_image_path, expected_output_result_category, error",
+    [
+        ("./tests/pictures/plane.jpeg", "Aeroplane", None),
+        ("./tests/pictures/frog.jpeg", "Frog", None),
+        ("./tests/pictures/horse.jpeg", "Horse", None),
+        ("notexistingfile.exe", "No Catetegory - Uploaded file is not an image!", None),
+    ],
+)
+def test_get_predictions(
+    input_image_path: str, expected_output_result_category: str, error: str
+) -> None:
+    """The function is automatically testing a predefined set of images with the predicted result category."""
+    assert expected_output_result_category == get_predictions(input_image_path)
