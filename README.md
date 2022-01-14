@@ -8,7 +8,7 @@ The app consists of the algorythm, an API and the user interface.
 
 3. The user interface displays the prediction of the desired image. To launch the user interface, the following must be done.
 Start Flask App:
-    1. run api/app.py in Visual Code.
+    1. run api/app.py in Visual Code (conda)
     2. app runs on http://127.0.0.1:5000/
     3. select image (Example Images in Folder fhnwse/tests/pictures)
     4. hit predict button
@@ -27,3 +27,10 @@ Additional information
 5. To deploy the app we would use Heroku. Heroku is a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud. We simply push our Git Repo with the prod / dev branch to Heroku and it works. More informations: https://devcenter.heroku.com/articles/git
 6. To restrict the access to our app we could use cloudflare for restricting ip-adresses, limit volumes or traffic
 7. To monitor, troubleshoot and tune our app we would use a Heroku Addon: New relic https://elements.heroku.com/addons/newrelic
+
+
+Projekt (Software Engineering für Data Scientists)
+Data Science Weiterbildung, FHNW
+
+Roman Hasler, Reto Schürmann
+14.01.2021
