@@ -14,3 +14,16 @@ Start Flask App:
     4. hit predict button
 
 
+
+
+Additional information
+1. Our project is availlable on Github: https://github.com/Reeeds/fhnwse
+2. For project- and issue management, we used Github's issue tool. See https://github.com/Reeeds/fhnwse/issues
+3. While developping we used the following packages:
+    - black
+    - autoflake
+    - flake8
+4. To run the four testcases in test_app_helper_model.py, execute the command pytest in the console.
+5. To deploy the app we would use Heroku. Heroku is a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud. We simply push our Git Repo with the prod / dev branch to Heroku and it works. More informations: https://devcenter.heroku.com/articles/git
+6. To restrict the access to our app we could use cloudflare for restricting ip-adresses, limit volumes or traffic
+7. To monitor, troubleshoot and tune our app we would use a Heroku Addon: New relic https://elements.heroku.com/addons/newrelic
